@@ -1,0 +1,27 @@
+
+    <div class="container">
+
+        <?php
+            $simpan=@$_POST['simpan'];
+            $id_buku=@$_POST['id_buku'];
+            $judul_buku=@$_POST['judul_buku'];
+            $no_isbn=@$_POST['no_isbn'];
+            $penulis=@$_POST['penulis'];
+            $penerbit=@$_POST['penerbit'];
+            $th_terbit=@$_POST['th_terbit'];
+            $stok=@$_POST['stok'];
+            $harga_pokok=@$_POST['harga_pokok'];
+            $harga_jual=@$_POST['harga_jual'];
+            $diskon=@$_POST['diskon'];
+            if (isset($simpan)) {
+                $insert=mysqli_query($con, "INSERT INTO buku
+                VALUES('$id_buku', '$judul_buku', '$no_isbn', '$penulis', '$penerbit', '$th_terbit', '$stok', '$harga_pokok', '$harga_jual', '$diskon')");
+                if ($insert)
+                {
+                    echo "<script>alert('Berhasil Tambah Data')</script>";
+                    echo "<meta http-equiv='refresh' content='0.8; url=tampil_buku.php'>";
+                } else {
+                    echo "<script>alert('Gagal Tambah Data')</script>";
+                }
+            }
+        ?>
