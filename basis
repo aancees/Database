@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Input Form Buku</title>
+</head>
+
+<body bgcolor="#999999">
+<form action="Fm_Inputbuku.php" method="post" name="form1" target="_self">
+<b>Masukan data Buku</b>
+<table width="344" border="1" cellspacing="0" cellpadding="0">
+<tr bgcolor="#003399">
+  <td width="104">Id Buku</td>
+  <td width="199">
+    <input name="id_buku" type="text" size="30" maxlength="30">
+  </td>
+</tr>
+
+<tr>
+  <td>Judul Buku</td>
+  <td>
+    <input name="judul_buku" type="text" size="30" maxlength="30">
+  </td>
+</tr>
+
+<tr>
+  <td>Nomor ISBN</td>
+  <td>
+    <input name="nomor_isbn" type="text" size="30" maxlength="30">
+  </td>
+</tr>
+
+<tr>
+  <td>PENULIS</td>
+  <td>
+    <input name="penulis" type="text" size="30" maxlength="30">
+  </td>
+</tr>
+
+<tr>
+  <td>PENERBIT</td>
+  <td>
+    <input name="text" type="text" size="30" maxlength="30" nama="penulis">
+  </td>
+</tr>
+
+<tr>
+  <td>TAHUN TERBIT</td>
+  <td>
+    <input name="tahun_terbit" type="text" size="30" maxlength="30">
+  </td>
+</tr>
+
+<tr>
+  <td>STOK</td>
+  <td>
+    <input name="stok" type="text" size="30" maxlength="30">
+  </td>
+</tr>
+
+<tr>
+  <td>HARGA POKOK</td>
+  <td>
+    <input name="harga_pokok" type="text" size="30" maxlength="30">
+  </td>
+</tr>
+
+<tr>
+  <td>HARGA JUAL</td>
+  <td>
+    <input name="harga_jual" type="text" size="30" maxlength="30">
+  </td>
+</tr>
+
+<tr>
+  <td></td>
+  <td>
+    <input type="submit" name="Submit" value="Simpan">
+  </td>
+</tr>
+</table>
+</form>
+
+<p>Hasil Output:</p>
+
+</body>
+</html>
