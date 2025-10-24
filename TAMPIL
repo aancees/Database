@@ -1,0 +1,54 @@
+<?php include 'koneksi.php'; ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menampilkan Data Dengan MYSQLI</title>
+
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>NO</th>
+                <th>ID Buku</th>
+                <th>Judul Buku</th>
+                <th>Nomor ISBN</th>
+                <th>Penulis</th>
+                <th>Penerbit</th>
+                <th>Tahun Terbit</th>
+                <th>Stok</th>
+                <th>Harga Pokok</th>
+                <th>Harga Jual</th>
+                <th>Diskon</th>
+            </tr>
+        </thead>
+    <tbody>
+        <?php
+        $i = 1;
+        $sql = mysqli_query($mysqli, "SELECT * FROM buku ORDER BY id_buku ASC");
+        while ($arr = mysqli_fetch_array($sql)) { ?>
+            <tr>
+                <td><?= $i++ ?></td>
+                <td><?= $arr['id_buku'] ?></td>
+                <td><?= $arr['judul_buku'] ?></td>
+                <td><?= $arr['nomor_isbn'] ?></td>
+                <td><?= $arr['penulis'] ?></td>
+                <td><?= $arr['penerbit'] ?></td>
+                <td><?= $arr['tahun_terbit'] ?></td>
+                <td><?= $arr['stok'] ?></td>
+                <td><?= $arr['harga_pokok'] ?></td>
+                <td><?= $arr['harga_jual'] ?></td>
+                <td><?= $arr['diskon'] ?></td>
+            </tr>
+        <?php } ?>
+        <ul>
+            <li><a href="tambah.php">Tambah Data</a></li>
+        </ul>
+    </tbody>
+    </table>
+</body>
+</html>
